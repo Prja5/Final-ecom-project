@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><center>Registration form</center></h1>
+    <form method="post" action="/edit/{{data.id}}">
+        {% csrf_token %}
+    <table border="1" align="center">
+        <tr>
+            <td>Enter Name</td>
+            <td><input type="text" name="name" value="{{data.name}}"></td>
+        </tr>
+        <tr>
+            <td>Enter Email</td>
+            <td><input type="email" name="email" value="{{data.email}}"></td>
+        </tr>
+        <tr>
+            <td>Enter MobileNo</td>
+            <td><input type="number" name="mob" value="{{data.mob}}"></td>
+        </tr>
+        <tr>
+            <td>Message</td>
+            <td><textarea name="msg" value="{{data.msg}}"></textarea></td>
+        </tr>
+        <tr>
+            <td align="center"><input type="submit" name="submit"></td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
